@@ -17,31 +17,36 @@
                 <h1>To-Do App</h1>
             </div>
             <hr>
-            <div class="task-container">
+            <div class="task-container ">
                 <div class="description">
                     <p>DESCRIPTION</p>
                     <input type="text" id="descr" placeholder="What do you need to do?" required>
                 </div>
                 <hr>
                 <div class="category-date-container">
-                    <span class="category-container">
+                    <div class="category-container">
                         <label for="category">CATEGORY</label>
-                        <select name="category" id="category">
+                        <br>
+                        <select name="category" id="category" arial-placeholder="Choose a Category">
                             <option value="Personal">Personal</option>
                             <option value="Work">Work</option>
                             <option value="College">College</option>
                             <option value="Other">Other</option>
                         </select>
-                    </span>
+                    </div>
                     <span class="date-container">
-                        Due Date:
-                        <input type="date" required>
+                        <p>Due Date:</p>
+                      
+                        <input type="date"  required>
                     </span>
                 </div>
                 <hr>
-                <button onclick="addTask()">Add Task!</button>
-                <button>Delete Task</button>
+                <div class="action-btn-container">
+                    <button  class="add-btn" onclick="addTask()">Add Task!</button>
+                    <button class="delete-btn">Delete Task</button>
+                </div>
             </div>
+            <hr>
         </div>
         
         <script src="" async defer></script>
