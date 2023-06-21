@@ -9,6 +9,7 @@
         </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
@@ -22,7 +23,7 @@
                
                 <div class="description">
                     <p>DESCRIPTION</p>
-                    <input type="text" id="descr" name="decs" placeholder="What do you need to do?" required>
+                    <input type="text" id="descr" name="desc" placeholder="What do you need to do?" required>
                 </div>
                 <hr>
                 <div class="category-date-container">
@@ -47,12 +48,30 @@
                 <div class="action-btn-container">
                     
                     <button  class="add-btn" >Add Task!</button>
-                    <button class="delete-btn" id="deleteButton">Delete Task</button>
+                    <button class="delete-btn" id="deleteButton" >Delete Task
+
+                    </button>
                 </div>
             </div>
             </form>
             <hr>
-
+            <div class="newTask-container">
+                <% for(let i of todo_list) { %>
+                    <li class = "todos">
+                        <div class="details">
+                            <input type="checkbox" name="delechack" class="delechack" onclick="checkedOrNot()" id = <%= i._id %> >
+                            <p><%=i.desc%></p>
+                            <p ><%=i.category%></p>
+                            <p><%=i.dueDate%> </p>
+                        </div>
+                        <div class="delete-icon">
+                            <a href='/delete-todo/?id=<%=i._id%>'>
+                                <i class="fas fa-window-close"></i>
+                            </a>
+                        </div>
+                    </li>
+               <% } %>
+            </div>
 
 
         </div>

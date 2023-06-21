@@ -12,7 +12,7 @@ const db = require('./config/mongoose');
 const TodoLists = require('./models/task');  
 
    // Use Express route
-   app.use('/',require('./routes/index'));
+
 // Set up the view engine
    app.set('view engine','ejs');
    app.set('views',path.join(__dirname,'views'));
@@ -23,8 +23,8 @@ const TodoLists = require('./models/task');
     app.use(bodyParser.urlencoded({extended: false})); 
 
     app.use(express.static('assessts'));
-    
-
+    // This should be after urlencoded 
+    app.use('/',require('./routes/index'));
 
 app.listen(port,function(err){
     if(err){

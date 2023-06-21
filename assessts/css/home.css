@@ -17,7 +17,8 @@ body{
     left:15%;
     width:70vw;
     margin-top:0px;
-    height:80vh;
+    height:90vh;
+    overflow-x: hidden;
 }
 
 
@@ -127,4 +128,30 @@ body{
     color: white;
     font-size: larger;
     text-align: center;
+}
+
+/* New To dos Styling */
+.newTask-container{
+    height: 40vh;
+    border:1px solid red;
+    overflow-x:hidden ;
+    overflow-y:scroll ;
+}
+
+.todos{
+    display: flex;
+    width: 100%;
+    border:1px solid green;
+    height:auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.delete-icon{
+    margin-top:20px;
+  
+    width:10%;
+    text-align: center;
+    font-size: xx-large;
 }
