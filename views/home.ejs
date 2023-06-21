@@ -17,10 +17,12 @@
                 <h1>To-Do App</h1>
             </div>
             <hr>
+            <form action="/create-todo" method="post">
             <div class="task-container ">
+               
                 <div class="description">
                     <p>DESCRIPTION</p>
-                    <input type="text" id="descr" placeholder="What do you need to do?" required>
+                    <input type="text" id="descr" name="decs" placeholder="What do you need to do?" required>
                 </div>
                 <hr>
                 <div class="category-date-container">
@@ -28,6 +30,7 @@
                         <label for="category">CATEGORY</label>
                         <br>
                         <select name="category" id="category" arial-placeholder="Choose a Category">
+                            <option value="" disabled selected>Choode a Category</option>
                             <option value="Personal">Personal</option>
                             <option value="Work">Work</option>
                             <option value="College">College</option>
@@ -37,18 +40,23 @@
                     <span class="date-container">
                         <p>Due Date:</p>
                       
-                        <input type="date"  required>
+                        <input type="date" name="dateValue" class="datesValues"  required>
                     </span>
                 </div>
                 <hr>
                 <div class="action-btn-container">
-                    <button  class="add-btn" onclick="addTask()">Add Task!</button>
-                    <button class="delete-btn">Delete Task</button>
+                    
+                    <button  class="add-btn" >Add Task!</button>
+                    <button class="delete-btn" id="deleteButton">Delete Task</button>
                 </div>
             </div>
+            </form>
             <hr>
+
+
+
         </div>
         
-        <script src="" async defer></script>
+        <script src="/js/script.js" async defer></script>
     </body>
 </html>
